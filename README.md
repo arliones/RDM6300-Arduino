@@ -3,7 +3,11 @@ Driver for RDM6300 RFID reader to Arduino. RDM6300 supports 125KHz tags that sto
 
 The current version was tested using SoftwareSerial on Arduino Uno, and HardwareSerial for Arduino Due. Please note that there are diferences in the instantiation of the component for these boards, probably due to some problem with global constructors using the ARM compiler (I still looking into the actual causes of this issue). Also note that Arduino's Serial.print does not support 64-bit integers, so RDM6300 implements a method to print tag IDs.
 
-# Example: SoftwareSerial on Arduino Uno (AVR)
+## Installation
+
+To install the library, download the zip file and import it into the Arduino environment by the "Sketch" menu in the Arduino IDE.
+
+## Example: SoftwareSerial on Arduino Uno (AVR)
 
 ```cpp
 #include <SoftwareSerial.h>
@@ -48,7 +52,7 @@ void loop()
 }
 ```
 
-# Example: HardwareSerial on Arduino Due (ARM)
+## Example: HardwareSerial on Arduino Due (ARM)
 
 ```cpp
 #include "RDM6300.h"
